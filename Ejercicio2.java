@@ -10,16 +10,20 @@ public class Ejercicio2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingresa tu nota");
         double nota = sc.nextDouble();
-        
-        if (nota>=0 && nota<=20) {
-            System.out.println("La nota esta en el rango");
+        System.out.println();
+        while (nota < 0 || nota > 20) {
+            System.out.println("Nota invalida");
+            System.out.println("Ingrese una nota valida");
+            nota =sc.nextDouble();
+            if (nota >= 0 && nota <= 20) {
+            System.out.println("Nota valida");
+        }
+        }
             if (nota>=14) {
                 System.out.println("APROBO");
             }else{
                 System.out.println("REPROBO");
             }
-        }else {
-            System.out.println("La nota esta fuera del rango");
         }
     }
-}
+
