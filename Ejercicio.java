@@ -9,6 +9,7 @@ public class Ejercicio {
             System.out.println("El numero " + numero + " es par");
         } else {
             System.out.println("El numero " + numero + " es impar");
+            
         }
     }
 }
