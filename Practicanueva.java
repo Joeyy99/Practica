@@ -1,23 +1,34 @@
+import java.util.Scanner;
+
 public class Practicanueva {
     public static void main(String[] args) {
-        String [] nombres = {"Joel", "Matias"};
-        nombres [0] = "Angelica";
+        
+        Scanner sc = new Scanner(System.in);
 
 
-        System.out.println(nombres [0]); 
+        //PRUEBA DE UN IF 
+        boolean esVelador;
+        System.out.println("Enciende el velador, escribir true o false");
+        esVelador = sc.nextBoolean();
 
-
-        String prueba = "Hola mundo      ";
-        System.out.println("El texto " + prueba + " tiene " + prueba.length());
-        System.out.println("El texto en minusculas es  " + prueba.toLowerCase());
-        System.out.println("El texto en mayuscula es  " + prueba.toUpperCase());
-
-        if (prueba.length() > 15) {
-            System.out.println("Hola nina bonita");
-        }else{
-            System.out.println("olaaaa");
+        if (esVelador) {
+            System.out.println("No hay que realizar nada mas ");
+        }else if (esVelador){
+            System.out.println("Esta enchufado el velador?");
+            esVelador = sc.nextBoolean();
+            if (esVelador) {
+            System.out.println("Esta quemado el foco");  
+            esVelador = sc.nextBoolean();  
+            System.out.println("Cambiar el foco");
+            System.out.println("No hay que realizar nada mas ");
+            }else{
+                System.out.println("Llevar a reparar");
+                System.out.println("No hay que realizar nada mas ");
+            }
+        }else {
+            System.out.println("Eschufar el velador");
         }
-
+        
         
     }
 }
